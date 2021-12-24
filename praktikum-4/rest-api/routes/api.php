@@ -22,10 +22,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // method get, endpoint animals
 Route::get("/animals", [AnimalController::class, 'index']);
 
+// method post
 Route::post("/animals", [AnimalController::class, 'store']);
 
 // method put
-Route::put("/animals/{id}", [AnimalController::class, 'put']);
+Route::put("/animals/{id}", [AnimalController::class, 'update']);
 
 // method delete
 Route::delete("/animals/{id}", [AnimalController::class, 'destroy']);

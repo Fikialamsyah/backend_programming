@@ -8,23 +8,23 @@ class AnimalController extends Controller
 {
     public $animals = ["ayam", "kucing"];
 
-
-    function index(){
+    
+    public function index(){
         foreach($this->animals as $animal){
             echo "$animal <br>";
         }
     }
     
-    function store(Request $request){
+    public function store(Request $request){
         array_push($this->animals, $request->nama);
         $this->index();
     }
 
-    function update(Request $requestm, $id){
+    public function update(Request $requestm, $id){
         echo "mengupdate data animals id:$id";
     }
 
-    function destroy(Request $request, $id){
+    public function destroy(Request $request, $id){
         echo "menghapus data animals id:$id";
     }
 }
